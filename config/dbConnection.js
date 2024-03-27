@@ -5,5 +5,5 @@ module.exports = function (){
         user: 'root',
         password: 'ifms',
         database: 'portal_noticias'
-    });
+    }); 
 }

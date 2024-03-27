@@ -1,6 +1,6 @@
 var http = require('http');
 var server = http.createServer(function (req, res) {
-
+ 
     var categoria = req.url;
     if (categoria == '/cursos') {
         res.end("<html> <body>IFMS Not&iacutecias de Cursos</body></html>");
