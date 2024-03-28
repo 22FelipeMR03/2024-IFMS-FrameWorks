@@ -6,4 +6,4 @@ module.exports = function (){
         password: 'ifms',
         database: 'portal_noticias'
     });
-}
+} 
