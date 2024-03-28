@@ -10,6 +10,10 @@ var rotaesportes = require('./app/routes/esportes')(app);
 
 var rota404 = require('./app/routes/404')(app); 
 
+var rotapesquisa = require('./app/routes/pesquisa')(app);
+
+var rotacursos = require('./app/routes/cursos')(app); 
+
 app.listen(3000, function(){
     console.log('Servidor ON');
 });
