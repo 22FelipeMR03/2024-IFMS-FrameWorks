@@ -3,7 +3,7 @@ module.exports = function (){
     return mysql.createConnection({
         host: 'localhost',
         user: 'root',
-        password: '6505Feli',
+        password: 'ifms',
         database: 'portal_noticias'
     });
 } 
