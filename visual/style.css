@@ -1,0 +1,11 @@
+body {
+	position: relative;
+	overflow-y: scroll;
+	height: 100%
+}
+.about {
+	background-color: #c1e5ea;
+}
+.contacts {
+	background-color: #d7d4f047;
+}
