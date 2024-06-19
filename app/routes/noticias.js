@@ -11,7 +11,7 @@ module.exports = function (app) {
         res.send('Noticias = Notificaçao:'+ req.params.Indentificaçao + "Nome Completo: "+ req.params.NomeCompleto);
     });
 
-    app.put("/noticias/:titulo/:noticia", function(req, res){
+    app.post("/noticias/:titulo/:noticia", function(req, res){
         var  conexao = app.config.dbConnection();
         var querryNoticias = "INSERT INTO `portal_noticias`.`noticias`(`titulo`,`noticia`)VALUES(''"+req.params.titulo+
         ",''"+req.params.noticia+")";
