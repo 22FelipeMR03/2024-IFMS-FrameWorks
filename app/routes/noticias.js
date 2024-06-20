@@ -9,7 +9,12 @@ module.exports = function (app) {
         res.send("ola");
 
     })
-    app.get("/noticias/:Identificacao/:NomeCompleto", function (req, res) {
+    app.post("/noticias/:titulo/:noticia", function (req, res) {
+        var queryNoticias = "INSERT INTO noticias (titulo,noticia) VALUES ('"+req.params.titulo+"','"+req.params.noticia+"')";
+        console.log(queryNoticias);
+        conexao.query(queryNoticias, function (err, result){
+            res.send("Gravou no Banco")
+        })
         res.send("ola");
 
     })
