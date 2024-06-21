@@ -10,13 +10,13 @@ module.exports = function (app) {
 
     })
     app.post("/noticias/:titulo/:noticia", function (req, res) {
+        var conexao = app.config.dbConnection();
         var queryNoticias = "INSERT INTO noticias (titulo,noticia) VALUES ('"+req.params.titulo+"','"+req.params.noticia+"')";
         console.log(queryNoticias);
-        conexao.query(queryNoticias, function (err, result){
-            res.send("Gravou no Banco")
+        conexao.query(queryNoticias, function (error, result){
+            console.log(error);
+            res.send(error.errno+" | "+error.sql+" | "+error.sqlMessage);
         })
-        res.send("ola");
-
     })
 
 }
