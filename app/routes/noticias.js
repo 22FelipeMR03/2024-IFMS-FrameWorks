@@ -6,17 +6,21 @@ module.exports = function (app) {
         });
     })
     app.get("/noticias/:id", function (req, res) {
-        res.send("ola");
+        res.send("ola id");
+
+    })
+    app.get("/noticias/:Identificacao/:NomeCompleto", function (req, res) {
+        res.send("ola identificação e nome completo");
 
     })
     app.post("/noticias/:titulo/:noticia", function (req, res) {
         var conexao = app.config.dbConnection();
-        var queryNoticias = "INSERT INTO noticias (titulo,noticia) VALUES ('"+req.params.titulo+"','"+req.params.noticia+"')";
-        console.log(queryNoticias);
-        conexao.query(queryNoticias, function (error, result){
+        var queryNoticias 
+        = 'INSERT INTO noticias (tit ulo,noticia) VALUES ("'
+        +req.params.titulo+'","'+req.params.noticia+'")'; 
+        conexao.query(queryNoticias,function (error, result) {
             console.log(error);
             res.send(error.errno+" | "+error.sql+" | "+error.sqlMessage);
         })
     })
-
 }
